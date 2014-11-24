@@ -23,6 +23,9 @@ public class BukkitInventory implements Inventory {
         ItemStack[] itemStacks = new ItemStack[inventory.getSize()];
 
         for (int i = 0, length = itemStacks.length; i < length; i++) {
+            if (itemStacks[i] == null) {
+                continue;
+            }
             itemStacks[i] = new BukkitItemStack(materials, inventory.getContents()[i]);
 
         }
@@ -37,21 +40,33 @@ public class BukkitInventory implements Inventory {
 
     @Override
     public ItemStack getHelmet() {
+        if (inventory.getHelmet() == null) {
+            return null;
+        }
         return new BukkitItemStack(materials, inventory.getHelmet());
     }
 
     @Override
     public ItemStack getLeggings() {
+        if (inventory.getLeggings() == null) {
+            return null;
+        }
         return new BukkitItemStack(materials, inventory.getLeggings());
     }
 
     @Override
     public ItemStack getChestplate() {
+        if (inventory.getChestplate() == null) {
+            return null;
+        }
         return new BukkitItemStack(materials, inventory.getChestplate());
     }
 
     @Override
     public ItemStack getBoots() {
+        if (inventory.getBoots() == null) {
+            return null;
+        }
         return new BukkitItemStack(materials, inventory.getBoots());
     }
 }

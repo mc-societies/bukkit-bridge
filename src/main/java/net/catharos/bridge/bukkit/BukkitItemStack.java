@@ -13,8 +13,12 @@ public class BukkitItemStack implements ItemStack {
     private final org.bukkit.inventory.ItemStack itemStack;
 
     public BukkitItemStack(Materials materials, org.bukkit.inventory.ItemStack itemStack) {
+        if (itemStack == null) {
+            throw new IllegalArgumentException("Itemstack not not be null!");
+        }
         this.materials = materials;
-        this.itemStack = itemStack;}
+        this.itemStack = itemStack;
+    }
 
     @Override
     public int getAmount() {
