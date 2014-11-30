@@ -1,8 +1,8 @@
-package net.catharos.bridge.bukkit;
+package org.societies.bridge.bukkit;
 
-import net.catharos.bridge.ItemStack;
-import net.catharos.bridge.Material;
-import net.catharos.bridge.Materials;
+import org.societies.bridge.ItemStack;
+import org.societies.bridge.Material;
+import org.societies.bridge.Materials;
 
 /**
  * Represents a BukkitItemStack

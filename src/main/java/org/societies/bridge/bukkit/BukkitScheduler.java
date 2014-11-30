@@ -1,7 +1,7 @@
-package net.catharos.bridge.bukkit;
+package org.societies.bridge.bukkit;
 
 import com.google.inject.Inject;
-import net.catharos.bridge.Scheduler;
+import org.societies.bridge.Scheduler;
 import org.bukkit.plugin.Plugin;
 
 /**

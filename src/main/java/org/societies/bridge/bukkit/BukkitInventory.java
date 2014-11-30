@@ -1,8 +1,8 @@
-package net.catharos.bridge.bukkit;
+package org.societies.bridge.bukkit;
 
-import net.catharos.bridge.Inventory;
-import net.catharos.bridge.ItemStack;
-import net.catharos.bridge.Materials;
+import org.societies.bridge.Inventory;
+import org.societies.bridge.ItemStack;
+import org.societies.bridge.Materials;
 import org.bukkit.inventory.PlayerInventory;
 
 /**

@@ -1,6 +1,6 @@
-package net.catharos.bridge.bukkit;
+package org.societies.bridge.bukkit;
 
-import net.catharos.bridge.Material;
+import org.societies.bridge.Material;
 
 /**
  * Represents a BukkitMaterial

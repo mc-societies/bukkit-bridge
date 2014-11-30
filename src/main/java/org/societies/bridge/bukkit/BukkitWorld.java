@@ -1,8 +1,8 @@
-package net.catharos.bridge.bukkit;
+package org.societies.bridge.bukkit;
 
-import net.catharos.bridge.ItemStack;
-import net.catharos.bridge.Location;
-import net.catharos.bridge.World;
+import org.societies.bridge.ItemStack;
+import org.societies.bridge.Location;
+import org.societies.bridge.World;
 import org.bukkit.Server;
 
 import java.util.UUID;
