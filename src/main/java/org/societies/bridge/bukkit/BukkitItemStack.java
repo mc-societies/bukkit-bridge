@@ -2,21 +2,19 @@ package org.societies.bridge.bukkit;
 
 import org.societies.bridge.ItemStack;
 import org.societies.bridge.Material;
-import org.societies.bridge.Materials;
 
 /**
  * Represents a BukkitItemStack
  */
 public class BukkitItemStack implements ItemStack {
 
-    private final Materials materials;
     private final org.bukkit.inventory.ItemStack itemStack;
 
-    public BukkitItemStack(Materials materials, org.bukkit.inventory.ItemStack itemStack) {
+    public BukkitItemStack(org.bukkit.inventory.ItemStack itemStack) {
         if (itemStack == null) {
-            throw new IllegalArgumentException("Itemstack not not be null!");
+            throw new IllegalArgumentException("ItemStack mustn't be null!");
         }
-        this.materials = materials;
+
         this.itemStack = itemStack;
     }
 
@@ -28,7 +26,7 @@ public class BukkitItemStack implements ItemStack {
     @SuppressWarnings("deprecation")
     @Override
     public Material getType() {
-        return materials.getMaterial(itemStack.getType().getId());
+        return new BukkitMaterial(itemStack.getType());
     }
 
     public static org.bukkit.inventory.ItemStack toBukkitItemStack(ItemStack itemStack) {

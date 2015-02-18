@@ -1,20 +1,17 @@
 package org.societies.bridge.bukkit;
 
+import org.bukkit.inventory.PlayerInventory;
 import org.societies.bridge.Inventory;
 import org.societies.bridge.ItemStack;
-import org.societies.bridge.Materials;
-import org.bukkit.inventory.PlayerInventory;
 
 /**
  * Represents a BukkitInventory
  */
 public class BukkitInventory implements Inventory {
 
-    private final Materials materials;
     private final PlayerInventory inventory;
 
-    public BukkitInventory(Materials materials, PlayerInventory inventory) {
-        this.materials = materials;
+    public BukkitInventory(PlayerInventory inventory) {
         this.inventory = inventory;
     }
 
@@ -26,7 +23,7 @@ public class BukkitInventory implements Inventory {
             if (itemStacks[i] == null) {
                 continue;
             }
-            itemStacks[i] = new BukkitItemStack(materials, inventory.getContents()[i]);
+            itemStacks[i] = new BukkitItemStack(inventory.getContents()[i]);
 
         }
 
@@ -43,7 +40,7 @@ public class BukkitInventory implements Inventory {
         if (inventory.getHelmet() == null) {
             return null;
         }
-        return new BukkitItemStack(materials, inventory.getHelmet());
+        return new BukkitItemStack(inventory.getHelmet());
     }
 
     @Override
@@ -51,7 +48,7 @@ public class BukkitInventory implements Inventory {
         if (inventory.getLeggings() == null) {
             return null;
         }
-        return new BukkitItemStack(materials, inventory.getLeggings());
+        return new BukkitItemStack(inventory.getLeggings());
     }
 
     @Override
@@ -59,7 +56,7 @@ public class BukkitInventory implements Inventory {
         if (inventory.getChestplate() == null) {
             return null;
         }
-        return new BukkitItemStack(materials, inventory.getChestplate());
+        return new BukkitItemStack(inventory.getChestplate());
     }
 
     @Override
@@ -67,6 +64,6 @@ public class BukkitInventory implements Inventory {
         if (inventory.getBoots() == null) {
             return null;
         }
-        return new BukkitItemStack(materials, inventory.getBoots());
+        return new BukkitItemStack(inventory.getBoots());
     }
 }

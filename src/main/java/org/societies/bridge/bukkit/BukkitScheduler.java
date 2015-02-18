@@ -1,8 +1,8 @@
 package org.societies.bridge.bukkit;
 
 import com.google.inject.Inject;
-import org.societies.bridge.Scheduler;
 import org.bukkit.plugin.Plugin;
+import org.societies.bridge.Scheduler;
 
 /**
  * Represents a BukkitScheduler
@@ -19,7 +19,7 @@ public class BukkitScheduler implements Scheduler {
     }
 
     @Override
-    public void scheduleSyncRepeatingTask(Runnable task, long delay, long period) {
-        scheduler.scheduleSyncRepeatingTask(plugin, task, delay, period);
+    public void scheduleSyncRepeatingTask(Runnable task, long period) {
+        scheduler.scheduleSyncRepeatingTask(plugin, task, 0L, period);
     }
 }
