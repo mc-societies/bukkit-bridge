@@ -39,7 +39,16 @@ public class BukkitWorld implements World {
     }
 
     public static org.bukkit.Location toBukkitLocation(Server server, Location loc) {
-        return new org.bukkit.Location(server.getWorld(loc.getWorld().getUUID()), loc.getX(), loc.getY(), loc.getZ());
+        World world = loc.getWorld();
+        org.bukkit.World bukkitWorld;
+
+        if (world == null) {
+            bukkitWorld = server.getWorlds().get(0);
+        } else {
+            bukkitWorld = server.getWorld(world.getUUID());
+        }
+
+        return new org.bukkit.Location(bukkitWorld, loc.getX(), loc.getY(), loc.getZ());
     }
 
 }
