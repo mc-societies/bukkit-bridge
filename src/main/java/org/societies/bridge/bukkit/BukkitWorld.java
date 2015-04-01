@@ -1,9 +1,9 @@
 package org.societies.bridge.bukkit;
 
+import org.bukkit.Server;
 import org.societies.bridge.ItemStack;
 import org.societies.bridge.Location;
 import org.societies.bridge.World;
-import org.bukkit.Server;
 
 import java.util.UUID;
 
@@ -14,7 +14,9 @@ public class BukkitWorld implements World {
 
     private final org.bukkit.World world;
 
-    public BukkitWorld(org.bukkit.World world) {this.world = world;}
+    public BukkitWorld(org.bukkit.World world) {
+        this.world = world;
+    }
 
     @Override
     public void dropItem(Location location, ItemStack itemStack) {

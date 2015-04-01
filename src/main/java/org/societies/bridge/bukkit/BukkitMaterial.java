@@ -9,7 +9,9 @@ public class BukkitMaterial implements Material {
 
     private final org.bukkit.Material material;
 
-    public BukkitMaterial(org.bukkit.Material material) {this.material = material;}
+    public BukkitMaterial(org.bukkit.Material material) {
+        this.material = material;
+    }
 
     @SuppressWarnings("deprecation")
     @Override
