@@ -1,8 +1,10 @@
 package org.societies.bridge.bukkit;
 
-import com.google.inject.Inject;
+
 import org.bukkit.plugin.Plugin;
 import org.societies.bridge.Scheduler;
+
+import javax.inject.Inject;
 
 /**
  * Represents a BukkitScheduler
